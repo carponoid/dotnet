@@ -1,0 +1,6 @@
+@WinServicesController_HostAddress = http://localhost:5226
+
+GET {{WinServicesController_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
