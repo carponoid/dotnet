@@ -1,0 +1,14 @@
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\WinServicesController.exe
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\appsettings.Development.json
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\appsettings.json
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\WinServicesController.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\WinServicesController.deps.json
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\WinServicesController.runtimeconfig.json
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\WinServicesController.pdb
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\Microsoft.OpenApi.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\System.ServiceProcess.ServiceController.dll
+C:\Users\prave\codebase\local\dotnet\WinServicesController\bin\RELEASE\net8.0\publish\runtimes\win\lib\net8.0\System.ServiceProcess.ServiceController.dll

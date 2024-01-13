@@ -1,17 +1,15 @@
-using System;
-using System.ServiceProcess;
-using System.Diagnostics;
-using System.Threading;
 using pkb.winutils;
-using System.Security.Principal;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddCors();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+// builder.Services.AddCors();
 
 
 var app = builder.Build();
@@ -24,28 +22,35 @@ if (app.Environment.IsDevelopment())
 }
 // app.UseHttpsRedirection();
 app.UseRouting();
+IConfigurationRoot config;
+
+if (app.Environment.IsDevelopment())
+{
+    config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json", false)
+    .Build();
+}
+else
+{
+    config = new ConfigurationBuilder()
+.AddJsonFile("appsettings.Development.json", false)
+.Build();
+}
+
+List<String> allowedOrigins = config.GetSection("CorsConfig:AllowedOrigins").Get<List<string>>()!;
+
+
+/* app.UseCors(builder => builder
+   .SetIsOriginAllowedToAllowWildcardSubdomains()
+   .WithOrigins([..allowedOrigins])
+   .AllowAnyHeader()
+   .AllowAnyMethod()
+   .AllowCredentials()
+   .SetPreflightMaxAge(TimeSpan.FromSeconds(3600))
+); */
+
+
 app.MapControllers();
-
-app.MapGet("/list", () =>
-{
-    return WinServiceController.GetAllWinService();
-}).WithName("GetListOfServices").WithOpenApi();
-
-app.MapGet("/list/{PartialServiceID}", (String PartialServiceID) =>
-{
-    return WinServiceController.GetMatchingWinService(PartialServiceID);
-}).WithName("SearchServices").WithOpenApi();
-
-app.MapGet("/start/{ServiceID}", (String ServiceID) =>
-{
-    return WinServiceController.StartWinService(ServiceID);
-}).WithName("StartService").WithOpenApi();
-
-app.MapGet("/stop/{ServiceID}", (String ServiceID) =>
-{
-    return WinServiceController.StopWinService(ServiceID);
-}).WithName("StopService").WithOpenApi();
-
 app.Run();
 
 

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "8AL11+PoFgEoZ3/Wr8TFDMlzhMgmvY2Vdh5VBdsVcD8=",
+  "Source": "WinServicesController",
+  "BasePath": "_content/WinServicesController",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

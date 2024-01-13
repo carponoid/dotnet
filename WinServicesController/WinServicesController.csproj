@@ -11,5 +11,6 @@
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="8.0.0-rc.2.23479.6"/>
     <PackageReference Include="System.Security.Principal" Version="4.3.0"/>
     <PackageReference Include="System.Security.Principal.Windows" Version="5.0.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0"/>
   </ItemGroup>
 </Project>
